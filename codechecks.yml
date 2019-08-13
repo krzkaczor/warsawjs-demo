@@ -1,0 +1,30 @@
+checks:
+  - name: vis-reg-routes
+    options:
+      collectionName: app
+      buildPath: ./build
+      routes:
+        - /
+
+  - name: lighthouse-keeper
+    options:
+      buildPath: ./build
+
+  - name: build-size-watcher
+    options:
+      name: Size
+      gzip: false
+      files:
+        - path: "./build/static/js/*.js"
+        - path: "./build/static/css/*.css"
+        - path: "./build/static/media/*.svg"
+
+  - name: build-size-watcher
+    options:
+      name: Size (GZIP)
+      gzip: true
+      files:
+        - path: "./build/static/js/*.js"
+          maxSize: 1MB
+        - path: "./build/static/css/*.css"
+        - path: "./build/static/media/*.svg"
