@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="app-logo"/>
+        <img src={logo} alt="warsawjs-logo" className="app-logo" />
         <p>Hello WarsawJS!</p>
       </header>
     </div>
